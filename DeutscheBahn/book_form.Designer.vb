@@ -166,7 +166,7 @@ Partial Class book_form
         Me.Controls.Add(Me.Label5)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "book_form"
-        Me.Text = "z`z`"
+        Me.Text = "Book a Ticket"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
