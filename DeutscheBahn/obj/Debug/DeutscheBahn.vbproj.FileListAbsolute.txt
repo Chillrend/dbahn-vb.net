@@ -9,3 +9,7 @@ c:\users\x453sa\documents\visual studio 2015\Projects\DeutscheBahn\DeutscheBahn\
 c:\users\x453sa\documents\visual studio 2015\Projects\DeutscheBahn\DeutscheBahn\obj\Debug\DeutscheBahn.exe
 c:\users\x453sa\documents\visual studio 2015\Projects\DeutscheBahn\DeutscheBahn\obj\Debug\DeutscheBahn.xml
 c:\users\x453sa\documents\visual studio 2015\Projects\DeutscheBahn\DeutscheBahn\obj\Debug\DeutscheBahn.pdb
+D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\bin\Debug\DeutscheBahn.exe.config
+D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\obj\Debug\DeutscheBahn.exe
+D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\obj\Debug\DeutscheBahn.xml
+D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\obj\Debug\DeutscheBahn.pdb
