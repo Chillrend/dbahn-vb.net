@@ -47,4 +47,10 @@
     Private Sub Panel2_Click(sender As Object, e As EventArgs) Handles Panel2.Click
         Close()
     End Sub
+
+    Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
+        Me.Hide()
+        book_form.Show()
+
+    End Sub
 End Class

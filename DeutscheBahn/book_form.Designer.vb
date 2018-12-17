@@ -26,10 +26,10 @@ Partial Class book_form
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.to_st = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.from_st = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -63,9 +63,9 @@ Partial Class book_form
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
+        Me.GroupBox1.Controls.Add(Me.to_st)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.from_st)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(21, 74)
@@ -75,22 +75,13 @@ Partial Class book_form
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Station Stops"
         '
-        'Label2
+        'to_st
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 30)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 15)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "From"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(9, 48)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(167, 23)
-        Me.ComboBox1.TabIndex = 1
+        Me.to_st.FormattingEnabled = True
+        Me.to_st.Location = New System.Drawing.Point(9, 102)
+        Me.to_st.Name = "to_st"
+        Me.to_st.Size = New System.Drawing.Size(167, 23)
+        Me.to_st.TabIndex = 3
         '
         'Label3
         '
@@ -101,13 +92,22 @@ Partial Class book_form
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "To"
         '
-        'ComboBox2
+        'from_st
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(9, 102)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(167, 23)
-        Me.ComboBox2.TabIndex = 3
+        Me.from_st.FormattingEnabled = True
+        Me.from_st.Location = New System.Drawing.Point(9, 48)
+        Me.from_st.Name = "from_st"
+        Me.from_st.Size = New System.Drawing.Size(167, 23)
+        Me.from_st.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 30)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 15)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "From"
         '
         'Label6
         '
@@ -179,9 +179,9 @@ Partial Class book_form
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents to_st As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents from_st As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label7 As Label
