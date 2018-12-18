@@ -53,4 +53,23 @@
         book_form.Show()
 
     End Sub
+
+
+    Sub showLogin()
+        Me.Hide()
+        login.Show()
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        Call showLogin()
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Call showLogin()
+    End Sub
+
+    Private Sub Panel3_Click(sender As Object, e As EventArgs) Handles Panel3.Click
+        Call showLogin()
+
+    End Sub
 End Class
