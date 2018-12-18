@@ -23,6 +23,8 @@ Public Class login
         If rd.HasRows Then
             Do While rd.Read
                 MessageBox.Show("Access Granted!, Welcome " + rd("username"))
+                Me.Dispose()
+                crud.Show()
             Loop
         Else
             MessageBox.Show("Username or Password Wrong!")
