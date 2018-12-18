@@ -26,6 +26,17 @@ Partial Class crud
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.addtodbBtn = New System.Windows.Forms.Button()
+        Me.deletefromtblBtn = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.routeidBox = New System.Windows.Forms.TextBox()
+        Me.locidBox = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.nameBox = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.idBox = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.stationTable = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
@@ -65,6 +76,17 @@ Partial Class crud
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.addtodbBtn)
+        Me.TabPage1.Controls.Add(Me.deletefromtblBtn)
+        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.routeidBox)
+        Me.TabPage1.Controls.Add(Me.locidBox)
+        Me.TabPage1.Controls.Add(Me.Label5)
+        Me.TabPage1.Controls.Add(Me.nameBox)
+        Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.idBox)
+        Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.stationTable)
         Me.TabPage1.Font = New System.Drawing.Font("Roboto Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
@@ -75,12 +97,109 @@ Partial Class crud
         Me.TabPage1.Text = "Station"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'addtodbBtn
+        '
+        Me.addtodbBtn.Font = New System.Drawing.Font("Roboto Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addtodbBtn.Location = New System.Drawing.Point(560, 267)
+        Me.addtodbBtn.Name = "addtodbBtn"
+        Me.addtodbBtn.Size = New System.Drawing.Size(75, 57)
+        Me.addtodbBtn.TabIndex = 11
+        Me.addtodbBtn.Text = "ADD"
+        Me.addtodbBtn.UseVisualStyleBackColor = True
+        '
+        'deletefromtblBtn
+        '
+        Me.deletefromtblBtn.Font = New System.Drawing.Font("Roboto Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deletefromtblBtn.Location = New System.Drawing.Point(560, 204)
+        Me.deletefromtblBtn.Name = "deletefromtblBtn"
+        Me.deletefromtblBtn.Size = New System.Drawing.Size(75, 57)
+        Me.deletefromtblBtn.TabIndex = 10
+        Me.deletefromtblBtn.Text = "DELETE"
+        Me.deletefromtblBtn.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(560, 141)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 57)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "EDIT"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(289, 58)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(58, 15)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Route_ID"
+        '
+        'routeidBox
+        '
+        Me.routeidBox.Location = New System.Drawing.Point(354, 49)
+        Me.routeidBox.Name = "routeidBox"
+        Me.routeidBox.Size = New System.Drawing.Size(111, 30)
+        Me.routeidBox.TabIndex = 7
+        '
+        'locidBox
+        '
+        Me.locidBox.Location = New System.Drawing.Point(354, 6)
+        Me.locidBox.Name = "locidBox"
+        Me.locidBox.Size = New System.Drawing.Size(111, 30)
+        Me.locidBox.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(289, 17)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(46, 15)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Loc_ID"
+        '
+        'nameBox
+        '
+        Me.nameBox.Location = New System.Drawing.Point(112, 49)
+        Me.nameBox.Name = "nameBox"
+        Me.nameBox.Size = New System.Drawing.Size(111, 30)
+        Me.nameBox.TabIndex = 4
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(48, 58)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(42, 15)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Name"
+        '
+        'idBox
+        '
+        Me.idBox.Location = New System.Drawing.Point(112, 6)
+        Me.idBox.Name = "idBox"
+        Me.idBox.Size = New System.Drawing.Size(111, 30)
+        Me.idBox.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(48, 17)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(19, 15)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "ID"
+        '
         'stationTable
         '
         Me.stationTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.stationTable.Location = New System.Drawing.Point(57, 120)
+        Me.stationTable.Location = New System.Drawing.Point(51, 117)
         Me.stationTable.Name = "stationTable"
-        Me.stationTable.Size = New System.Drawing.Size(575, 244)
+        Me.stationTable.Size = New System.Drawing.Size(464, 239)
         Me.stationTable.TabIndex = 0
         '
         'TabPage2
@@ -105,6 +224,7 @@ Partial Class crud
         Me.Text = "Form2"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         CType(Me.stationTable, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -117,4 +237,15 @@ Partial Class crud
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents stationTable As DataGridView
     Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Label3 As Label
+    Friend WithEvents addtodbBtn As Button
+    Friend WithEvents deletefromtblBtn As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents routeidBox As TextBox
+    Friend WithEvents locidBox As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents nameBox As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents idBox As TextBox
 End Class

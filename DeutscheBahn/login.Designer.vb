@@ -82,6 +82,7 @@ Partial Class login
         '
         Me.pwd.Location = New System.Drawing.Point(16, 165)
         Me.pwd.Name = "pwd"
+        Me.pwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.pwd.Size = New System.Drawing.Size(165, 20)
         Me.pwd.TabIndex = 11
         '
