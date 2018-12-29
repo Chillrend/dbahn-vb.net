@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class book_form
-    Public from_stat, to_stat, adult, infants, date_departure As String
+    Public from_stat, to_stat, from_text, to_text, adult, infants, date_departure As String
 
     Sub loadCombo()
 
@@ -21,13 +21,17 @@ Public Class book_form
             station = New DataTable()
             station.Load(rd)
 
-            from_st.DataSource = station
+            Dim station_to As DataTable
+            station_to = New DataTable
+            station_to = station.Copy()
+
             from_st.DisplayMember = "name"
             from_st.ValueMember = "id"
+            from_st.DataSource = station
 
-            to_st.DataSource = station
             to_st.DisplayMember = "name"
             to_st.ValueMember = "id"
+            to_st.DataSource = station_to
         End If
     End Sub
 
@@ -43,9 +47,11 @@ Public Class book_form
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If from_st.SelectedValue = to_st.SelectedValue Then
+        If from_st.SelectedValue <> to_st.SelectedValue Then
             from_stat = from_st.SelectedValue
             to_stat = to_st.SelectedValue
+            from_text = from_st.Text
+            to_text = to_st.Text
             adult = passgr_real.Text
             infants = passgr_fake.Text
             date_departure = depDate.Text

@@ -34,7 +34,7 @@ Module DBCon
             & "pwd=akarpohon;" _
             & "database=trendb"
 
-            conn = New MySqlConnection(str)
+            conn2 = New MySqlConnection(str)
 
             If conn2.State = ConnectionState.Closed Then
                 conn2.Open()
@@ -52,7 +52,7 @@ Module DBCon
             & "pwd=akarpohon;" _
             & "database=trendb"
 
-            conn = New MySqlConnection(str)
+            conn3 = New MySqlConnection(str)
 
             If conn3.State = ConnectionState.Closed Then
                 conn3.Open()
@@ -70,7 +70,7 @@ Module DBCon
             & "pwd=akarpohon;" _
             & "database=trendb"
 
-            conn = New MySqlConnection(str)
+            conn4 = New MySqlConnection(str)
 
             If conn4.State = ConnectionState.Closed Then
                 conn4.Open()
@@ -88,7 +88,7 @@ Module DBCon
             & "pwd=akarpohon;" _
             & "database=trendb"
 
-            conn = New MySqlConnection(str)
+            conn5 = New MySqlConnection(str)
 
             If conn5.State = ConnectionState.Closed Then
                 conn5.Open()

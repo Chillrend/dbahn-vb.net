@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class train_result
-    Public from_stat, to_stat, adult, infants, date_departure As String
+    Public from_stat, to_stat, from_text, to_text, adult, infants, date_departure As String
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
@@ -13,11 +13,13 @@ Public Class train_result
         adult = book_form.adult
         infants = book_form.infants
         date_departure = book_form.date_departure
+        from_text = book_form.from_text
+        to_text = book_form.to_text
 
-
+        Call showTrainTable()
     End Sub
 
-    Sub showTrainable()
+    Sub showTrainTable()
         Dim dt As New DataTable
         Dim dc As New DataColumn
 
@@ -56,8 +58,8 @@ Public Class train_result
         Call connect()
 
         Dim sql As String
-        sql = "SELECT * FROM station"
-
+        sql = "select * from ticket where std_id=" + from_stat + " and sta_id=" + to_stat + " and date_depart='" + date_departure + "';"
+        '"select * from ticket where std_id=" + from_stat + " and sta_id=" + to_stat + " and date_depart='" + date_departure + "';"
         cmd = New MySqlCommand(sql, conn)
 
         rd = cmd.ExecuteReader
@@ -65,12 +67,32 @@ Public Class train_result
         If rd.HasRows Then
             While rd.Read
                 Dim R As DataRow = dt.NewRow
-                R("ID") = rd("id")
+                R("ID") = rd("tkt_id")
+
+                Call connect2()
+                Dim cmd2 As MySqlCommand
+                Dim sequel As String
+                sequel = "SELECT name FROM series WHERE id=" + rd.GetString("tr_id")
+                cmd2 = New MySqlCommand(sequel, conn2)
+                rd2 = cmd2.ExecuteReader
+                If rd2.HasRows Then
+                    While rd2.Read
+                        R("Train name") = rd2.GetString("name")
+                    End While
+                End If
+                cmd2.Dispose()
+                conn2.Close()
+
+                R("Departure Station") = from_text
+                R("Arrival Station") = to_text
+                R("Departure Date and Time") = rd.GetString("date_depart") + ", " + rd.GetString("time_depart")
+                R("Price") = rd.GetString("price")
+
                 dt.Rows.Add(R)
             End While
         End If
 
-        traintbl.DataSource = ds.Tables(0)
+        traintbl.DataSource = dt
 
     End Sub
 End Class

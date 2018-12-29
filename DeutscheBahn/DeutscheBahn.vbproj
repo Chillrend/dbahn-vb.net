@@ -129,6 +129,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="savedrd.vb" />
     <Compile Include="train_result.Designer.vb">
       <DependentUpon>train_result.vb</DependentUpon>
     </Compile>
