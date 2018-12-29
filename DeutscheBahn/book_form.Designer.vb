@@ -31,12 +31,18 @@ Partial Class book_form
         Me.from_st = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.passgr_real = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.passgr_fake = New System.Windows.Forms.TextBox()
+        Me.depDate = New System.Windows.Forms.DateTimePicker()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label5
@@ -70,7 +76,7 @@ Partial Class book_form
         Me.GroupBox1.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(21, 74)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(223, 144)
+        Me.GroupBox1.Size = New System.Drawing.Size(223, 181)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Station Stops"
@@ -78,7 +84,7 @@ Partial Class book_form
         'to_st
         '
         Me.to_st.FormattingEnabled = True
-        Me.to_st.Location = New System.Drawing.Point(9, 102)
+        Me.to_st.Location = New System.Drawing.Point(9, 121)
         Me.to_st.Name = "to_st"
         Me.to_st.Size = New System.Drawing.Size(167, 23)
         Me.to_st.TabIndex = 3
@@ -86,7 +92,7 @@ Partial Class book_form
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 84)
+        Me.Label3.Location = New System.Drawing.Point(6, 103)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(21, 15)
         Me.Label3.TabIndex = 2
@@ -118,12 +124,12 @@ Partial Class book_form
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Adults"
         '
-        'TextBox1
+        'passgr_real
         '
-        Me.TextBox1.Location = New System.Drawing.Point(9, 48)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(40, 23)
-        Me.TextBox1.TabIndex = 4
+        Me.passgr_real.Location = New System.Drawing.Point(9, 48)
+        Me.passgr_real.Name = "passgr_real"
+        Me.passgr_real.Size = New System.Drawing.Size(40, 23)
+        Me.passgr_real.TabIndex = 4
         '
         'Label7
         '
@@ -136,30 +142,81 @@ Partial Class book_form
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.passgr_fake)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.passgr_real)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(21, 223)
+        Me.GroupBox2.Location = New System.Drawing.Point(250, 74)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(120, 91)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Passenger"
         '
-        'TextBox2
+        'passgr_fake
         '
-        Me.TextBox2.Location = New System.Drawing.Point(55, 48)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(40, 23)
-        Me.TextBox2.TabIndex = 6
+        Me.passgr_fake.Location = New System.Drawing.Point(55, 48)
+        Me.passgr_fake.Name = "passgr_fake"
+        Me.passgr_fake.Size = New System.Drawing.Size(40, 23)
+        Me.passgr_fake.TabIndex = 6
+        '
+        'depDate
+        '
+        Me.depDate.Location = New System.Drawing.Point(9, 45)
+        Me.depDate.Name = "depDate"
+        Me.depDate.Size = New System.Drawing.Size(200, 23)
+        Me.depDate.TabIndex = 8
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.depDate)
+        Me.GroupBox3.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(250, 171)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(225, 84)
+        Me.GroupBox3.TabIndex = 8
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Date"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 27)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 15)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Departure Date"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(21, 261)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Cancel"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(102, 261)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Search"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'book_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(497, 322)
+        Me.ClientSize = New System.Drawing.Size(521, 304)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
@@ -171,6 +228,8 @@ Partial Class book_form
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -183,8 +242,13 @@ Partial Class book_form
     Friend WithEvents Label3 As Label
     Friend WithEvents from_st As ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents passgr_real As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents passgr_fake As TextBox
+    Friend WithEvents depDate As DateTimePicker
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

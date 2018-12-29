@@ -26,3 +26,4 @@ D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\obj\Debug\DeutscheBahn.R
 D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\obj\Debug\DeutscheBahn.vbproj.GenerateResource.Cache
 D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\obj\Debug\DeutscheBahn.login.resources
 D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\obj\Debug\DeutscheBahn.crud.resources
+D:\Farhan\ISAS OR PROJECT DOC\DBahn-VB.net\DeutscheBahn\obj\Debug\DeutscheBahn.train_result.resources
