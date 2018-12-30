@@ -3,6 +3,12 @@
 Public Class train_result
     Public from_stat, to_stat, from_text, to_text, adult, infants, date_departure As String
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Dispose()
+    End Sub
+
+    Public selected_train As String
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
     End Sub
