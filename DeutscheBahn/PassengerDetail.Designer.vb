@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PassengerDetail
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class PassengerDetail
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PassengerDetail))
         Me.Label1 = New System.Windows.Forms.Label()
@@ -28,10 +28,9 @@ Partial Class PassengerDetail
         Me.FormCounter = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.passgr_name = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.passgr_id = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -87,13 +86,13 @@ Partial Class PassengerDetail
         Me.passgr_name.Size = New System.Drawing.Size(135, 27)
         Me.passgr_name.TabIndex = 12
         '
-        'TextBox1
+        'passgr_id
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Roboto Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(17, 168)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(247, 27)
-        Me.TextBox1.TabIndex = 14
+        Me.passgr_id.Font = New System.Drawing.Font("Roboto Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.passgr_id.Location = New System.Drawing.Point(17, 168)
+        Me.passgr_id.Name = "passgr_id"
+        Me.passgr_id.Size = New System.Drawing.Size(247, 27)
+        Me.passgr_id.TabIndex = 14
         '
         'Label3
         '
@@ -116,20 +115,10 @@ Partial Class PassengerDetail
         Me.Button1.Text = "Cancel"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Roboto Light", 9.75!)
-        Me.Button2.Location = New System.Drawing.Point(98, 223)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Previous"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Roboto Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(179, 223)
+        Me.Button3.Location = New System.Drawing.Point(98, 223)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 17
@@ -142,9 +131,8 @@ Partial Class PassengerDetail
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(433, 258)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.passgr_id)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.passgr_name)
         Me.Controls.Add(Me.Label2)
@@ -164,9 +152,8 @@ Partial Class PassengerDetail
     Friend WithEvents FormCounter As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents passgr_name As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents passgr_id As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
 End Class

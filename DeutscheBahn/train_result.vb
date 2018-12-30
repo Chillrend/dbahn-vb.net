@@ -7,9 +7,14 @@ Public Class train_result
         Me.Dispose()
     End Sub
 
-    Public selected_train As String
+    Public selected_schedule, selected_train As String
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        selected_schedule = traintbl.CurrentRow.Cells(0).Value
+        selected_train = traintbl.CurrentRow.Cells(1).Value
+
+        Me.Hide()
+        PassengerDetail.Show()
 
     End Sub
 
@@ -34,6 +39,11 @@ Public Class train_result
         dc = New DataColumn
         dc.DataType = System.Type.GetType("System.String")
         dc.ColumnName = "ID"
+        dt.Columns.Add(dc)
+
+        dc = New DataColumn
+        dc.DataType = System.Type.GetType("System.String")
+        dc.ColumnName = "Train ID"
         dt.Columns.Add(dc)
 
         dc = New DataColumn
@@ -89,6 +99,7 @@ Public Class train_result
                 cmd2.Dispose()
                 conn2.Close()
 
+                R("Train ID") = rd.GetString("tr_id")
                 R("Departure Station") = from_text
                 R("Arrival Station") = to_text
                 R("Departure Date and Time") = rd.GetString("date_depart") + ", " + rd.GetString("time_depart")
