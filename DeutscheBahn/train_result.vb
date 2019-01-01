@@ -7,11 +7,13 @@ Public Class train_result
         Me.Dispose()
     End Sub
 
-    Public selected_schedule, selected_train As String
+    Public selected_schedule, selected_train, selected_train_name, date_time_departure As String
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         selected_schedule = traintbl.CurrentRow.Cells(0).Value
         selected_train = traintbl.CurrentRow.Cells(1).Value
+        selected_train_name = traintbl.CurrentRow.Cells(2).Value
+        date_time_departure = traintbl.CurrentRow.Cells(5).Value
 
         Me.Hide()
         PassengerDetail.Show()

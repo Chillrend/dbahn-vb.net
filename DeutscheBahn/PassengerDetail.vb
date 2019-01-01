@@ -14,7 +14,8 @@ Public Class PassengerDetail
             Call add_invoice()
             adult_counter = 1
             'Showing Details Here
-            MsgBox("Counter Ends")
+            Me.Hide()
+            success_page.Show()
         End If
     End Sub
 
